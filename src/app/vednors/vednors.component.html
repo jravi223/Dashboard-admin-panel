@@ -44,9 +44,7 @@
                 <div class="option2 nav-option">
                     <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png" class="nav-img"
                         alt="articles">
-                    <!-- <h3> Home</h3> -->
-                    <h3 (click)="redirttoHOme()"> Home</h3>
-
+                    <h3> Home</h3>
                 </div>
 
                 <!-- <div class="nav-option option3">
@@ -64,7 +62,7 @@
                 <div class="nav-option option5">
                     <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png" class="nav-img"
                         alt="blog">
-                    <h3 (click)="redirectToPages()">Users</h3>
+                    <h3 >Users</h3>
                 </div>
 
                 <!-- <div class="nav-option option6"> -->
@@ -93,44 +91,49 @@
         </div>
 
         <div class="box-container">
-
-            <div class="box box1">
-                <div class="text">
-                    <h2 class="topic-heading">60.5k</h2>
-                    <h2 class="topic">Article Views</h2>
-                </div>
-
-                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(31).png"
-                    alt="Views">
-            </div>
-
-            <div class="box box2">
-                <div class="text">
-                    <h2 class="topic-heading">150</h2>
-                    <h2 class="topic">Likes</h2>
-                </div>
-
-                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210185030/14.png" alt="likes">
-            </div>
-
-            <div class="box box3">
-                <div class="text">
-                    <h2 class="topic-heading">320</h2>
-                    <h2 class="topic">Comments</h2>
-                </div>
-
-                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(32).png"
-                    alt="comments">
-            </div>
-
-            <div class="box box4">
-                <div class="text">
-                    <h2 class="topic-heading">70</h2>
-                    <h2 class="topic">Published</h2>
-                </div>
-
-                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210185029/13.png" alt="published">
-            </div>
+            <table class="table align-middle mb-0 bg-white">
+                <thead class="bg-light">
+                  <tr>
+                    <th>Name</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                    <th>Position</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img
+                            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                            alt=""
+                            style="width: 45px; height: 45px"
+                            class="rounded-circle"
+                            />
+                        <div class="ms-3">
+                          <p class="fw-bold mb-1">user</p>
+                          <p class="text-muted mb-0">user123</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="fw-normal mb-1">Software engineer</p>
+                      <p class="text-muted mb-0">IT department</p>
+                    </td>
+                    <td>
+                      <span class="badge badge-success rounded-pill d-inline">Active</span>
+                    </td>
+                    <td>Senior</td>
+                    <td>
+                      <button type="button" class="btn btn-link btn-sm btn-rounded">
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+          
         </div>
 
         <!-- <div class="report-container">
