@@ -1,29 +1,28 @@
-import { Component } from '@angular/core';
-import { AdminComponent } from '../admin/admin.component';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule, NgFor, NgForOf, NgIf } from '@angular/common';
-import { HeaderComponent } from '../header/header.component';
-import { SideNavComponent } from '../side-nav/side-nav.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 class Registration {
   constructor(
     public firstName: string = '',
-    public title: string = '',
-    public status: string = '',
-    public position: string = '',
+    public lastName: string = '',
+    public email: string = '',
+    public password: string = '',
     public country: string = 'Select country'
-  ) { }
+  ) {}
 }
 
+
 @Component({
-  selector: 'app-vednors',
+  selector: 'app-test',
   standalone: true,
-  imports: [AdminComponent, FormsModule, CommonModule,SideNavComponent, HeaderComponent, NgFor, NgForOf, NgIf],
-  templateUrl: './vednors.component.html',
-  styleUrl: './vednors.component.css'
+  imports: [FormsModule,CommonModule, NgFor,NgForOf,NgIf],
+  templateUrl: './test.component.html',
+  styleUrl: './test.component.css'
 })
-export class VednorsComponent {
+export class TestComponent implements OnInit{
   // It maintains list of Registrations
   registrations: Registration[] = [];
   // It maintains registration Model
@@ -34,17 +33,16 @@ export class VednorsComponent {
   submitType: string = 'Save';
   // It maintains table row index based on selection.
   selectedRow: any;
-
-  constructor(private router: Router) {
-
+  // It maintains Array of countries.
+  countries: string[] = ['US', 'UK', 'India', 'UAE'];
+  constructor() {
+    // Add default registration data.
+    // this.registrations.push(new Registration('Johan', 'Peter',  'johan@gmail.com', 'johan123', 'UK'));
+    // this.registrations.push(new Registration('Mohamed', 'Tariq',  'tariq@gmail.com', 'tariq123', 'UAE'));
+    // this.registrations.push(new Registration('Nirmal', 'Kumar',  'nirmal@gmail.com', 'nirmal123', 'India'));
   }
 
-  logout() {
-    localStorage.clear();
-    this.router.navigateByUrl('/login');
-  }
-
-
+  ngOnInit() {}
 
   // This method associate to New Button.
   onNew() {
@@ -64,9 +62,9 @@ export class VednorsComponent {
     } else {
       // Update the existing properties values based on model.
       this.registrations[this.selectedRow].firstName = this.regModel.firstName;
-      this.registrations[this.selectedRow].title = this.regModel.title;
-      this.registrations[this.selectedRow].status = this.regModel.status;
-      this.registrations[this.selectedRow].position = this.regModel.position;
+      this.registrations[this.selectedRow].lastName = this.regModel.lastName;
+      this.registrations[this.selectedRow].email = this.regModel.email;
+      this.registrations[this.selectedRow].password = this.regModel.password;
       // this.registrations[this.selectedRow].country = this.regModel.country;
     }
     // Hide registration entry section.
@@ -99,7 +97,9 @@ export class VednorsComponent {
     this.showNew = false;
   }
 
-
-
-
+  // This method associate to Bootstrap dropdown selection change.
+  // onChangeCountry(country: string) {
+  //   // Assign corresponding selected country to model.
+  //   this.regModel.country = country;
+  // }
 }

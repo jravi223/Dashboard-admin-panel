@@ -3,11 +3,12 @@ import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angul
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { TestComponent } from './test/test.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [AdminComponent, LoginComponent, RouterLink, RouterLinkActive,RouterModule,FormsModule,RouterOutlet],
+  imports: [AdminComponent, LoginComponent,TestComponent, RouterLink, RouterLinkActive,RouterModule,FormsModule,RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

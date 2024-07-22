@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { HeaderComponent } from '../header/header.component';
-import { SideNavComponent } from '../side-nav/side-nav.component';
 
 @Component({
-  selector: 'app-admin',
+  selector: 'app-side-nav',
   standalone: true,
-  imports: [HeaderComponent, SideNavComponent],
-  templateUrl: './admin.component.html',
-  styleUrl: './admin.component.css'
+  imports: [],
+  templateUrl: './side-nav.component.html',
+  styleUrl: './side-nav.component.css'
 })
-export class AdminComponent {
+export class SideNavComponent {
 
   constructor(private router: Router) {
 
@@ -21,6 +19,7 @@ export class AdminComponent {
     this.router.navigateByUrl('/login');
   }
 
+
   redirectToPages() {
     this.router.navigateByUrl('/admin/vendors');
   }
@@ -29,5 +28,9 @@ export class AdminComponent {
     this.router.navigateByUrl('/admin');
   }
 
+  redirectToPayments() {
+    this.router.navigateByUrl('/payment');
+
+  }
 
 }

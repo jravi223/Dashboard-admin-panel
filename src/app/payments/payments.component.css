@@ -353,7 +353,10 @@ header {
     width: 800px;
   }
 }
-
+h3 {
+    font-size: calc(1.3rem + -0.1vw);
+    font-weight: bold;
+}
 @media screen and (max-width: 850px) {
   .nav-img {
     height: 30px;
@@ -497,4 +500,28 @@ header {
     width: 180px;
   }
 }
+
+.badgered {
+    background-color: red;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .badgeorange {
+    background-color: orange;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .badgesuccess {
+    background-color: green;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 5px;
+  }
 
