@@ -20,7 +20,7 @@ export class LoginComponent {
 
   onSubmit(loginForm: NgForm) {
     console.log("dkjfhsfdkjh")
-    if (loginForm.value.username == 'admin' && loginForm.value.password == 'admin123') {
+    if (loginForm.value.username == 'vendor' && loginForm.value.password == 'vendor123') {
       this.router.navigateByUrl('/admin');
       localStorage.setItem('Role', 'admin');
     } else if (loginForm.value.username == 'user' && loginForm.value.password == 'user123') {
